@@ -47,7 +47,7 @@ graphics->Flip();
 int GameOver() 
 { 
 
-
+// Проверка на чью-нибудь победу
 
 for(int i = 1; i < 3; i++) 
  
@@ -65,7 +65,7 @@ if( (grid[0][0] == i && grid[1][0] == i && grid[2][0] == i) ||
 (grid[2][0] == i && grid[1][1] == i && grid[0][2] == i) ) 
 return i; 
 
- 
+// Проверка на ничью 
 int count = 0; 
 for(int i = 0; i < 3; i++) 
 for(int j = 0; j < 3; j++) 
@@ -99,7 +99,7 @@ default:
 return; 
 } 
 
-
+//Хотите продолжить?
 if(MessageBox(0,message,"Игра окончена",MB_YESNO) == IDYES)
 Reset(); 
 else 
@@ -129,7 +129,7 @@ y = input->GetButtonDownCoords().y / (GRID_SIZE / 3);
 
 if(grid[x][y] == 0) 
 { 
- 
+// Устанавливаем крестик или нолик в клетку 
 grid[x][y] = currplayer; 
 
 if(currplayer == 1) 
