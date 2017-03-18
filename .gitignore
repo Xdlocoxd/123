@@ -6,7 +6,7 @@ private:
 Input* input; 
 Graphics* graphics; 
 
-
+// Изображения фона
 Image* back; 
 (Image* player)[2]; 
 
@@ -24,7 +24,7 @@ SDL_WM_SetCaption("Tic-Tac-Toe",0);
 void LoadingImage() 
 { 
 
-
+// Загрузка изображений
 back = graphics->NewImage("C:\\Users\\HOME\\Desktop\\back.bmp"); 
 player[0] = graphics->NewImage("C:\\Users\\HOME\\Desktop\\X.bmp",255,255,255); 
 player[1] = graphics->NewImage("C:\\Users\\HOME\\Desktop\\O.bmp",255,255,255); 
@@ -33,7 +33,7 @@ player[1] = graphics->NewImage("C:\\Users\\HOME\\Desktop\\O.bmp",255,255,255);
 void Reset() 
 { 
 
-
+// Очистка поля
 currplayer = 1; 
 
 for(int i = 0; i < 3; i++) 
